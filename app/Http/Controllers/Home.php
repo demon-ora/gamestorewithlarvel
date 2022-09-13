@@ -51,7 +51,7 @@ class Home extends Controller
       {
       $game= Game::find($id);
      if(is_null($game)){
-     return redirect('home');
+     return redirect()->back();
      }
        $data=compact('game');
       return view('selectdata')->with($data);
