@@ -48,7 +48,7 @@
 		<p class="game-description">Something about game:{{$game->des}}</p>
    </div>
   <p id="size">downlod this file<br>
-    <a href="{{url('gamefolder/chess.apk')}}" download="" rel="noopener noreferrer" target="_blank">
+    <a href="{{asset('storage/'.$game->url)}}" download="" rel="noopener noreferrer" target="_blank">
     <button type="button" class="btn btn-primary">Download File</button>
    </a>
      </p>

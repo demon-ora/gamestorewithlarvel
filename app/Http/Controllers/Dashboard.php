@@ -76,13 +76,15 @@ class Dashboard extends Controller
         $img = $request->file('image');
         $imgna = $img->getClientOriginalName();
         $img->storeAs('public/imgg',$imgna);
-        $url = $request->file('gameurl')->store('url');
+        $url = $request->file('gameurl');
+        $urlna = $img->getClientOriginalName();
+        $url->storeAs('public/url',$urlna);
      $game= new Game;
      $game->title = $request['title'];
      $game->categories  = $request['cate'];
      $game->type = $request['gametype'];
      $game->image = $imgna;
-     $game->url = $url;
+     $game->url = $urlna;
      $game->des = $request['descripation'];
       $reg = $game->save();
       if($reg){
