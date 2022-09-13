@@ -33,3 +33,4 @@ Route::post('/dashboardgame/update/{id}',[Dashboard::class,'updategame']);
 Route::get('/home',[Home::class,'index']);
 Route::get('/modedgame',[Home::class,'index1']);
 Route::get('/normalgame',[Home::class,'index2']);
+Route::get('/home/select/{id}',[Home::class,'select']);

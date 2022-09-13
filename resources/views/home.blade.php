@@ -121,9 +121,9 @@
         @foreach ( $games as $game )
         <tr class="inlie">
            <td style="border: 1px solid black; background: #808080d6; text-align:center">
-         <a href="testonepage.php?id="><img src="{{asset('storage/imgg/'.$game->image)}}" class="cen">
+         <a href="{{url('/home/select')}}/{{$game->id}}"><img src="{{asset('storage/imgg/'.$game->image)}}" class="cen">
          </a><br>
-      <a href="testonepage.php?id=" style="color: white;">{{$game->title}}
+      <a href="{{url('/home/select')}}/{{$game->id}}" style="color: white;">{{$game->title}}
          </a>
      </td>
      </tr>
@@ -142,9 +142,9 @@
         @foreach ( $ga as $game )
         <tr class="inlie">
            <td style="border: 1px solid #007bff; background: #28a74585; text-align:center">
-         <a href="testonepage.php?id="><img src="{{asset('storage/imgg/'.$game->image)}}" class="cen"></a>
+         <a href="{{url('/home/select')}}/{{$game->id}}"><img src="{{asset('storage/imgg/'.$game->image)}}" class="cen"></a>
          <br>
-       <a href="testonepage.php?id=" style="color: black;"> {{$game->title}}
+       <a href="{{url('/home/select')}}/{{$game->id}}" style="color: black;"> {{$game->title}}
          </a>
      </td>
      </tr>

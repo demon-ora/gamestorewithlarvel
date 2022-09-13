@@ -44,8 +44,18 @@ class Home extends Controller
       // print_r($games->toArray());
       // die;
       $data= compact('games','g','ga','gam','ag');
-      return view('normalgame')->with($data);
+        return view('normalgame')->with($data);
+      }
+
+      public function select($id)
+      {
+      $game= Game::find($id);
+     if(is_null($game)){
+     return redirect('home');
+     }
+       $data=compact('game');
+      return view('selectdata')->with($data);
+    }
     }
 
 
-}
