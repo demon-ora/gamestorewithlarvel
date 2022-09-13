@@ -69,7 +69,7 @@
       <div class="mix action all xd" >
         @foreach ($g as $game )
            <div class="card" style="width: 23rem; display: inline-block; border:1px solid black">
-  <a href="testonepage.php?id=" class="aa"><img src="{{asset('storage/imgg/'.$game->image)}}"  class="fine card-img-top" style="object-fit: cover;"></a>
+  <a href="{{url('/home/select')}}/{{$game->id}}" class="aa"><img src="{{asset('storage/imgg/'.$game->image)}}"  class="fine card-img-top" style="object-fit: cover;"></a>
    <div class="card-body">
     <h1 class="card-text" style="text-align: center;">{{$game->title}}</h1>
   </div>
@@ -79,7 +79,7 @@
         <div class="mix Arcade all xd" >
       @foreach ($ga as $game )
                <div class="card" style="width: 23rem; display: inline-block; border:1px solid black">
-  <a href="testonepage.php?id=" class="aa"><img src="{{asset('storage/imgg/'.$game->image)}}"  class="fine card-img-top" style="object-fit: cover;"></a>
+  <a href="{{url('/home/select')}}/{{$game->id}}" class="aa"><img src="{{asset('storage/imgg/'.$game->image)}}"  class="fine card-img-top" style="object-fit: cover;"></a>
    <div class="card-body">
     <h1 class="card-text" style="text-align: center;">{{$game->title}}</h1>
   </div>
@@ -90,7 +90,7 @@
  
             @foreach ($ag as $game )
                 <div class="card" style="width: 23rem; display: inline-block; border:1px solid black">
-  <a href="testonepage.php?id=" class="aa"><img src="{{asset('storage/imgg/'.$game->image)}}"  class="fine card-img-top" style="object-fit: cover;"></a>
+  <a href="{{url('/home/select')}}/{{$game->id}}" class="aa"><img src="{{asset('storage/imgg/'.$game->image)}}"  class="fine card-img-top" style="object-fit: cover;"></a>
    <div class="card-body">
     <h1 class="card-text" style="text-align: center;">{{$game->title}}</h1>
   </div>
@@ -101,7 +101,7 @@
       
         @foreach ($gam as $game )
                 <div class="card" style="width: 23rem; display: inline-block; border:1px solid black">
-  <a href="testonepage.php?id=" class="aa"><img src="{{asset('storage/imgg/'.$game->image)}}"  class="fine card-img-top" style="object-fit: cover;"></a>
+  <a href="{{url('/home/select')}}/{{$game->id}}" class="aa"><img src="{{asset('storage/imgg/'.$game->image)}}"  class="fine card-img-top" style="object-fit: cover;"></a>
    <div class="card-body">
     <h1 class="card-text" style="text-align: center;">{{$game->title}}</h1>
   </div>
@@ -112,7 +112,7 @@
     
         @foreach ($games as $game )
               <div class="card" style="width: 23rem; display: inline-block; border:1px solid black">
-  <a href="testonepage.php?id=" class="aa"><img src="{{asset('storage/imgg/'.$game->image)}}"  class="fine card-img-top" style="object-fit: cover;"></a>
+  <a href="{{url('/home/select')}}/{{$game->id}}" class="aa"><img src="{{asset('storage/imgg/'.$game->image)}}"  class="fine card-img-top" style="object-fit: cover;"></a>
    <div class="card-body">
     <h1 class="card-text" style="text-align: center;">{{$game->title}}</h1>
   </div>
