@@ -20,7 +20,7 @@ Route::get('/',[Login::class,'index']);
 Route::get('/regestation',[Regestation::class,'index']);
 Route::post('/regestation',[Regestation::class,'store']);
 Route::post('/',[Login::class,'login']);
-Route::get('/dashboard',[Dashboard::class,'index']);
+Route::get('/dashboard',[Dashboard::class,'index'])->middleware('islogin');
 Route::get('/dashboarduser',[Dashboard::class,'index1']);
 Route::get('/dashboarduser/delete/{id}',[Dashboard::class,'destory']);
 Route::get('/dashboarduser/edit/{id}',[Dashboard::class,'edit']);

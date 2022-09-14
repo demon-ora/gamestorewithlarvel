@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Game;
 use Auth;
 use Hash;
 class Login extends Controller
@@ -23,8 +24,11 @@ class Login extends Controller
     if($user)
     {
         if(Hash::check($request->password,$user->password)){
-         $request->session()->put('$userid',$user->id);
-         return view('dashboard');
+         $request->session()->put('userid',$user->id);
+         $users= User::all()->count();
+         $games= Game::all()->count();
+         $data= compact('users','games');
+         return view('dashboard')->with($data);
      }}
      else 
      {
