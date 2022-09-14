@@ -32,8 +32,8 @@ class Login extends Controller
      }}
      else 
      {
-       echo "login fail";
+      return back()->with('error','password or email is wrong');
      }
-
+     return back()->with('errorno','password or email is wrong');
     }
 }

@@ -25,7 +25,7 @@
        <li><a href="{{url('/dashboard')}}"><i class="fas fa-home"></i>Home</a></li>
        <li><a href="{{url('/dashboarduser')}}" ><i class="fas fa-user-alt"></i>ListUser</a></li>
        <li><a href="{{url('/dashboardgame')}}"><i class="fas fa-gamepad"></i>Game</a></li>
-       <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+       <li><a href="{{url('/dashboard/logout')}}"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
       </ul>
     </div>
    <!--page content-->

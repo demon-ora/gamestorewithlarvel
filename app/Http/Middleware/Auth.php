@@ -17,7 +17,7 @@ class Auth
     public function handle(Request $request, Closure $next)
     {
         if(!session()->has('userid')){
-            return redirect('welcome');     
+            return redirect('');     
         }
             return $next($request);     
     }

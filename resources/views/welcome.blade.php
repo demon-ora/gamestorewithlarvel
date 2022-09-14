@@ -5,6 +5,11 @@
 	<title>Array Login Form</title>
 </head>
 <body>
+	@if (session()->has('error'))
+		<span style="background-color: white;color:firebrick">{{session()->get('error')}}</span>
+	@elseif (session()->has('errorno'))
+	<span style="background-color: white;color:firebrick">{{session()->get('errorno')}}</span>
+	@endif
 <form action="{{url('/')}}" method="post" class="box">
     @csrf
 	<h1>Login Form</h1>

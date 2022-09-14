@@ -23,6 +23,7 @@ class Dashboard extends Controller
       $data= compact('users');
       return view('dashboarduser')->with($data);
     }
+
     public function destory($id)
     {
      $user= User::find($id);
@@ -132,4 +133,10 @@ class Dashboard extends Controller
       $game->save();
     return redirect('dashboardgame');
   } 
+
+  public function logout(Request $request)
+    {
+     $request->session()->forget('userid');
+      return view('welcome');
+    }
 }
