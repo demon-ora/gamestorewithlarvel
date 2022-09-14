@@ -9,7 +9,10 @@ class Dashboard extends Controller
 {
     public function index()
     {
-      return view('dashboard');
+      $users= User::all()->count();
+      $games= Game::all()->count();
+      $data= compact('users','games');
+      return view('dashboard')->with($data);
     }
 
     public function index1()

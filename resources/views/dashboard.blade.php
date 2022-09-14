@@ -22,8 +22,8 @@
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['website', 'calculation'],
-          ['normal game',    2],
-          ['moded game',      1],
+          ['user',    {{$users}}],
+          ['game',    {{$games}}],
         ]);
 
         var options = {
@@ -56,13 +56,13 @@
             <a href="#" class="btn btn-success" id="menu-toggle">toggle menu</a>
             <div class="container jumbotron" style="text-align: center;">
              <div class="badge">
-               <a href="dashboarduser.php">
+               <a href="{{url('/dashboarduser')}}">
                 <h1>user</h1>
                 <p>go to user page</p>
                </a>
               </div>
               <div class="badge" style="display: inline-block; margin-left:0px; background:lightgreen; " >
-               <a href="dashboardgamee.php">
+               <a href="{{url('/dashboardgame')}}">
                  <h1>game</h1>
                  <p>go to game page</p>
                </a>
