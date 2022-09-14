@@ -22,9 +22,9 @@
    <div id="sidebar-wrapper">
      <ul class="sidebar-nav">
        <li><a href="#" class="logo"><img src={{url('forntend/img/c.PNG')}}  width="50px" height="50px">Dashboard</a></li>
-       <li><a href="dashboard.php"><i class="fas fa-home"></i>Home</a></li>
-       <li><a href="dashboarduser.php" ><i class="fas fa-user-alt"></i>ListUser</a></li>
-       <li><a href="dashboardgamee.php"><i class="fas fa-gamepad"></i>Game</a></li>
+       <li><a href="{{url('/dashboard')}}"><i class="fas fa-home"></i>Home</a></li>
+       <li><a href="{{url('/dashboarduser')}}" ><i class="fas fa-user-alt"></i>ListUser</a></li>
+       <li><a href="{{url('/dashboardgame')}}"><i class="fas fa-gamepad"></i>Game</a></li>
        <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
       </ul>
     </div>
