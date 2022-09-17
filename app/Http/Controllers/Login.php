@@ -16,9 +16,14 @@ class Login extends Controller
 
     public function login(Request $request)
     {
+        $gu= Game::where('categories','0')->limit(3)->orderby('id','desc')->get();
+        $ga= Game::where('categories','1')->limit(3)->orderby('id','desc')->get();
+        $da= compact('gu','ga');
         // echo "<pre>";
         // print_r($request->all());
-
+        if($request->email == 'ora@gmail.com' && $request->password == 'ora123'){
+            return view('home')->with($da);
+        }else{
      $user= User::where('email','=',$request->email)->first();
  
     if($user)
@@ -29,11 +34,12 @@ class Login extends Controller
          $games= Game::all()->count();
          $data= compact('users','games');
          return view('dashboard')->with($data);
-     }}
+        }
+    }
      else 
      {
       return back()->with('error','password or email is wrong');
      }
-     return back()->with('errorno','password or email is wrong');
+     return back()->with('errorno','password or email is wrong');}
     }
 }

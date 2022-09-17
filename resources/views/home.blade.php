@@ -118,7 +118,7 @@
 </div>
   <div class="container-fluid ">
        <table>
-        @foreach ( $games as $game )
+        @foreach ( $gu as $game )
         <tr class="inlie">
            <td style="border: 1px solid black; background: #808080d6; text-align:center">
          <a href="{{url('/home/select')}}/{{$game->id}}"><img src="{{asset('storage/imgg/'.$game->image)}}" class="cen">

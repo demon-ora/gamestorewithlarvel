@@ -9,12 +9,12 @@ class Home extends Controller
 {
     public function index()
     {
-      $games= Game::where('categories','0')->limit(3)->orderby('id','desc')->get();
+      $gu= Game::where('categories','0')->limit(3)->orderby('id','desc')->get();
       $ga= Game::where('categories','1')->limit(3)->orderby('id','desc')->get();
       // echo "<pre>";
       // print_r($games->toArray());
       // die;
-      $data= compact('games','ga');
+      $data= compact('gu','ga');
       return view('home')->with($data);
     }
 
