@@ -56,6 +56,11 @@ class Home extends Controller
        $data=compact('game');
       return view('selectdata')->with($data);
     }
+    public function logout(Request $request)
+    {
+     $request->session()->forget('userid');
+      return view('welcome');
+    }
     }
 
 
