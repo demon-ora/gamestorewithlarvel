@@ -26,13 +26,13 @@
   <!-- Links -->
   <ul class="navbar-nav mr-auto">
     <li class="nav-item">
-      <a class="nav-link  mx-4 namee" href="home.php"><i class="fas fa-home"></i>Home</a>
+      <a class="nav-link  mx-4 namee" href="{{url('/home')}}"><i class="fas fa-home"></i>Home</a>
     </li>
     <li class="nav-item">  
-      <a class="nav-link mx-4" href="2ndpage.php"><i class="fas fa-gamepad"></i>Moded Game</a>
+      <a class="nav-link mx-4" href="{{url('/modedgame')}}"><i class="fas fa-gamepad"></i>Modgame</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link   mx-4" href="3rdpage.php"><i class="fab fa-d-and-d"></i>game</a>
+      <a class="nav-link mx-4" href="{{url('/normalgame')}}"><i class="fab fa-d-and-d"></i>Game</a>
     </li>
   </ul>
 </div>
